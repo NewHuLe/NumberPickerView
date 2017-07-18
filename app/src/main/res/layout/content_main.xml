@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="cn.com.cesgroup.numberpickerview.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <cn.com.cesgroup.numpickerview.NumberPickerView
+        android:id="@+id/purchase_num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonWidth="40dp"
+        app:editable="true"
+        app:editextWidth="120dp"
+        app:individer="@drawable/divider_horizontal"
+        app:textColor="@android:color/black"
+        app:textSize="14sp" />
+
+    <cn.com.cesgroup.numpickerview.NumberPickerView
+        android:id="@+id/purchase_num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:backgroud="@color/colorAccent"
+        app:buttonWidth="40dp"
+        app:editable="true"
+        app:editextWidth="120dp"
+        app:individer="@drawable/divider_horizontal1"
+        app:textColor="@android:color/black"
+        app:textSize="14sp" />
+
+    <cn.com.cesgroup.numpickerview.NumberPickerView
+        android:id="@+id/purchase_num3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:addBackground="@color/colorPrimary"
+        app:backgroud="@color/colorAccent"
+        app:buttonWidth="40dp"
+        app:editable="true"
+        app:editextWidth="120dp"
+        app:individer="@drawable/divider_horizontal2"
+        app:subBackground="@color/colorPrimary"
+        app:textColor="@android:color/black"
+        app:textSize="14sp" />
+
+</LinearLayout>
