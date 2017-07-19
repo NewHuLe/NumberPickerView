@@ -202,7 +202,7 @@ public class NumberPickerView extends LinearLayout implements View.OnClickListen
      * @return NumPickerView
      */
     public NumberPickerView setCurrentNum(int currentNum) {
-        if (currentNum > 1) {
+        if (currentNum > minDefaultNum) {
             if (currentNum <= currentInventory) {
                 mNumText.setText(String.valueOf(currentNum));
             } else if(currentNum >maxValue){
