@@ -12,8 +12,8 @@
 ```
 ## 废话不多说，先看效果图
 <div align="center">
-	<img src="https://github.com/NewHuLe/NumberPickerView/blob/master/screenshoot.png" height="330" width="190">
-	</div>
+<img src="https://github.com/NewHuLe/NumberPickerView/blob/master/screenshoot.png" height="480" width="270">
+</div>
 	
 ## 使用方法
 project工程目录build.gradle添加依赖
