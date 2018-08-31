@@ -1,7 +1,33 @@
-# NumberPickerView
+# NumberPickerView  
+[![](https://jitpack.io/v/NewHuLe/NumberPickerView.svg)](https://jitpack.io/#NewHuLe/NumberPickerView)
+
 仿商城添加商品数量，数量加减选择器，支持手动输入
-## 效果图
+## 功能简介
+```
+1. 仿购物车添加删除商品
+2. 支持手动输入数量
+3. 支持库存数量的最值监听
+4. 支持输入框及按钮的样式自定义
+```
+## 废话不多说，先看效果图
  ![image](https://github.com/NewHuLe/NumberPickerView/blob/master/screenshoot.png)
+ 
+## 使用方法
+project工程目录build.gradle添加依赖
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+app项目的目录build.gradle添加依赖
+```
+dependencies {
+	        implementation 'com.github.NewHuLe:NumberPickerView:v1.1'
+	}
+```
 ## 支持的自定义属性
 ```
 <resources>
