@@ -3,7 +3,6 @@
 [![](https://jitpack.io/v/NewHuLe/NumberPickerView.svg)](https://jitpack.io/#NewHuLe/NumberPickerView)
 [![](https://github.com/NewHuLe/NumberPickerView/blob/master/author.svg)](https://www.jianshu.com/u/e87d858e89a4)
 </br>
-</div>
 仿商城添加商品数量，数量加减选择器，支持手动输入
 ## 功能简介
 ```
