@@ -5,6 +5,7 @@
 1. 仿购物车添加删除商品
 2. 支持手动输入数量
 3. 支持库存数量的最值监听
+4. 支持输入框及按钮的样式自定义
 ```
 ## 废话不多说，先看效果图
  ![image](https://github.com/NewHuLe/NumberPickerView/blob/master/screenshoot.png)
