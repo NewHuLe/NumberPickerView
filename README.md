@@ -11,8 +11,10 @@
 4. 支持输入框及按钮的样式自定义
 ```
 ## 废话不多说，先看效果图
- ![image](https://github.com/NewHuLe/NumberPickerView/blob/master/screenshoot.png)
- 
+<div align="center">
+	<img src="https://github.com/NewHuLe/NumberPickerView/blob/master/screenshoot.png" height="330" width="190">
+	</div>
+	
 ## 使用方法
 project工程目录build.gradle添加依赖
 ```
