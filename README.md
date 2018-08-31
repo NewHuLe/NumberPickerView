@@ -2,8 +2,7 @@
 [<div align=center>![](https://jitpack.io/v/NewHuLe/NumberPickerView.svg)](https://jitpack.io/#NewHuLe/NumberPickerView)
 [![](https://github.com/NewHuLe/NumberPickerView/blob/master/author.svg)](https://www.jianshu.com/u/e87d858e89a4)
 </br>
-<div align=left>
-仿商城添加商品数量，数量加减选择器，支持手动输入
+<div align=left> 仿商城添加商品数量，数量加减选择器，支持手动输入
 ## 功能简介
 ```
 1. 仿购物车添加删除商品
