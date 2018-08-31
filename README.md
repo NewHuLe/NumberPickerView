@@ -11,7 +11,7 @@
 4. 支持输入框及按钮的样式自定义
 ```
 ## 废话不多说，先看效果图
-<div align="center">
+<div align="left">
 <img src="https://github.com/NewHuLe/NumberPickerView/blob/master/screenshoot.png" height="480" width="270">
 </div>
 	
