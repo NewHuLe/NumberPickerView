@@ -1,7 +1,7 @@
-# NumberPickerView
-仿商城添加商品数量，数量加减选择器，支持手动输入
+# NumberPickerView  
 [![](https://jitpack.io/v/NewHuLe/NumberPickerView.svg)](https://jitpack.io/#NewHuLe/NumberPickerView)
 
+仿商城添加商品数量，数量加减选择器，支持手动输入
 ## 功能简介
 ```
 1. 仿购物车添加删除商品
