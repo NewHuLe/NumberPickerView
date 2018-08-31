@@ -1,5 +1,4 @@
 # NumberPickerView  
-<div align=center> 
 [![](https://jitpack.io/v/NewHuLe/NumberPickerView.svg)](https://jitpack.io/#NewHuLe/NumberPickerView)
 [![](https://github.com/NewHuLe/NumberPickerView/blob/master/author.svg)](https://www.jianshu.com/u/e87d858e89a4)
 </br>
