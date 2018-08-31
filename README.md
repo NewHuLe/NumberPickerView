@@ -10,7 +10,7 @@
  ![image](https://github.com/NewHuLe/NumberPickerView/blob/master/screenshoot.png)
  
 ## 使用方法
-工程目录添加依赖
+project工程目录build.gradle添加依赖
 ```
 allprojects {
 		repositories {
@@ -19,7 +19,7 @@ allprojects {
 		}
 	}
 ```
-项目的目录添加依赖
+app项目的目录build.gradle添加依赖
 ```
 dependencies {
 	        implementation 'com.github.NewHuLe:NumberPickerView:v1.1'
