@@ -5,6 +5,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NumberPickerView numberPickerView1 = (NumberPickerView) findViewById(R.id.purchase_num1);
-        numberPickerView1.setMaxValue(40)
+        NumberPickerView numberPickerView = (NumberPickerView) findViewById(R.id.purchase_num1);
+        numberPickerView.setMaxValue(40)
                 .setCurrentInventory(150)
                 .setMinDefaultNum(1)
                 .setCurrentNum(20)
@@ -51,7 +53,23 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"超过最大限制量",Toast.LENGTH_SHORT).show();
             }
         });
+        // 默认的监听大部分可以满足要求了，如果有需要自己监听输入框的数字变化的话，需要以下监听
+        numberPickerView.setOnInputNumberListener(new NumberPickerView.OnInputNumberListener() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                Log.d("MainActivity",editable.toString());
+            }
+        });
     }
 
     @Override

@@ -40,6 +40,8 @@ public class NumberPickerView extends LinearLayout implements View.OnClickListen
 
     // 监听事件(负责警戒值回调)
     private OnClickInputListener onClickInputListener;
+    // 监听输入框内容变化
+    private OnInputNumberListener onInputNumberListener;
 
     public NumberPickerView(Context context) {
         super(context);
@@ -188,7 +190,8 @@ public class NumberPickerView extends LinearLayout implements View.OnClickListen
     }
 
     /**
-     *  最大限制量
+     * 最大限制量
+     *
      * @param maxValue
      * @return
      */
@@ -205,9 +208,9 @@ public class NumberPickerView extends LinearLayout implements View.OnClickListen
         if (currentNum > minDefaultNum) {
             if (currentNum <= currentInventory) {
                 mNumText.setText(String.valueOf(currentNum));
-            } else if(currentNum >maxValue){
+            } else if (currentNum > maxValue) {
                 mNumText.setText(String.valueOf(maxValue));
-            }else {
+            } else {
                 mNumText.setText(String.valueOf(currentInventory));
             }
         } else {
@@ -218,6 +221,11 @@ public class NumberPickerView extends LinearLayout implements View.OnClickListen
 
     public NumberPickerView setmOnClickInputListener(OnClickInputListener mOnWarnListener) {
         this.onClickInputListener = mOnWarnListener;
+        return this;
+    }
+
+    public NumberPickerView setOnInputNumberListener(OnInputNumberListener onInputNumberListener) {
+        this.onInputNumberListener = onInputNumberListener;
         return this;
     }
 
@@ -254,17 +262,24 @@ public class NumberPickerView extends LinearLayout implements View.OnClickListen
     }
 
     @Override
-    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
+    public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
+        if (onInputNumberListener != null) {
+            onInputNumberListener.beforeTextChanged(charSequence, start, count, after);
+        }
     }
 
     @Override
     public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-
+        if (onInputNumberListener != null) {
+            onInputNumberListener.onTextChanged(charSequence, start, before, count);
+        }
     }
 
     @Override
     public void afterTextChanged(Editable editable) {
+        if (onInputNumberListener != null) {
+            onInputNumberListener.afterTextChanged(editable);
+        }
         try {
             mNumText.removeTextChangedListener(this);
             String inputText = editable.toString().trim();
@@ -330,6 +345,18 @@ public class NumberPickerView extends LinearLayout implements View.OnClickListen
         void onWarningMinInput(int minValue);
 
         void onWarningMaxInput(int maxValue);
+    }
+
+    /**
+     * 输入框数字内容监听
+     */
+    public interface OnInputNumberListener {
+
+        void beforeTextChanged(CharSequence s, int start, int count, int after);
+
+        void onTextChanged(CharSequence charSequence, int start, int before, int count);
+
+        void afterTextChanged(Editable editable);
     }
 
     /**
