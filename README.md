@@ -9,6 +9,7 @@
 2. 支持手动输入数量
 3. 支持库存数量的最值监听
 4. 支持输入框及按钮的样式自定义
+5. 支持输入框数字的单独监听
 ```
 ## 废话不多说，先看效果图
 <div align="left">
@@ -28,7 +29,7 @@ allprojects {
 app项目的目录build.gradle添加依赖
 ```
 dependencies {
-	        implementation 'com.github.NewHuLe:NumberPickerView:v1.1'
+	        implementation 'com.github.NewHuLe:NumberPickerView:v1.2'
 	}
 ```
 ## 支持的自定义属性
@@ -86,6 +87,23 @@ dependencies {
             @Override
             public void onWarningMaxInput(int maxValue) {
                 Toast.makeText(MainActivity.this,"超过最大限制量",Toast.LENGTH_SHORT).show();
+            }
+        });
+	  // 默认的监听大部分可以满足要求了，如果有需要自己监听输入框的数字变化的话，需要以下监听
+        numberPickerView.setOnInputNumberListener(new NumberPickerView.OnInputNumberListener() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                Log.d("MainActivity",editable.toString());
             }
         });
  ```
